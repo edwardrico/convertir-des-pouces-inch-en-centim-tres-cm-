@@ -1,7 +1,8 @@
 cm = 2.54
 pouce = 0.394
 
-def converseur():
+
+def convertisseur():
     while True:
         print("Options : ")
         print("1- Souhaitez-vous convertir pouce en cm ?")
@@ -34,5 +35,6 @@ def converseur():
         except ValueError:
             print("Erreur, vous devez entrer un nombre pour votre option!")
         print()
+
 
 converseur()
