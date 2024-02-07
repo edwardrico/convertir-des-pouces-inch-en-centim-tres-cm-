@@ -16,8 +16,7 @@ def convertisseur():
                     print(f"{choix} pouces équivaut à {round(choix * cm, 2)} cm ")
                     break
 
-                if option == 2:
-
+                elif option == 2:
                     choix1 = float(input("Entrez le nombre de cm que vous souhaitez convertir : "))
                     print(f"{choix1} cm équivaut à {round(choix1 * pouce, 2)} pouces  ")
                     break
