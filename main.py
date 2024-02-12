@@ -1,51 +1,44 @@
 import time
 
-cm = 2.54
-pouce = 0.394
+CM = 2.54
+POUCE = 0.394
 
 
-def convertisseur():
+def convertisseur(valeur, valeur1):
     while True:
         print("Options : ")
-        print("1- Souhaitez-vous convertir pouce en cm ?")
-        print("2- Souhaitez-vous convertir cm en pouce ?")
+        print(f"1- Souhaitez-vous convertir pouce en {valeur} ?")
+        print(f"2- Souhaitez-vous convertir cm en {valeur1} ?")
         print("3- Terminé \n")
         try:
             option = int(input("Choisissez parmi les options : /1/2/3/ : "))
-            print()
+
             if 1 <= option <= 3:
                 if option == 1:
-                    choix = float(input("Entrez le nombre de pouces que vous souhaitez convertir : "))
-                    print(f"{choix} pouces équivaut à {round(choix * cm, 2)} cm\n ")
-                    input("Apluyer enter pour contionue au /1/ pour sortir\n")
-                    if input == 1:
-                        print("Merci au voir")
-                        break
-                    else:
-                        print("Parfait on recommence! \n")
-                        time.sleep(3)
-                        continue
+                    choix = float(input(f"Entrez le nombre de {valeur1} que vous souhaitez convertir : "))
+                    print(f"{choix} pouces équivaut à {round(choix * CM, 2)} {valeur}\n ")
 
                 elif option == 2:
-                    choix1 = float(input("Entrez le nombre de cm que vous souhaitez convertir : "))
-                    print(f"{choix1} cm équivaut à {round(choix1 * pouce, 2)} pouces\n  ")
-                    input("Apluyer enter pour contionue au /1/ pour sortir\n")
-                    if input == 1:
-                        print("Merci au voir")
-                        break
-                    else:
-                        print("Parfait on recommence!\n")
-                        time.sleep(3)
-                        continue
+                    choix1 = float(input(f"Entrez le nombre de {valeur} que vous souhaitez convertir : "))
+                    print(f"{choix1} cm équivaut à {round(choix1 * POUCE, 2)} {valeur1}\n  ")
 
                 elif option == 3:
                     print("Merci, au revoir !")
                     break
+
+                input("Apluyer enter pour contionue au /1/ pour sortir\n")
+                if input == 1:
+                    print("Merci au voir")
+                    break
+                else:
+                    print("Parfait on recommence!\n")
+                    time.sleep(3)
+                    continue
+
             else:
                 print("Option invalide. Veuillez choisir parmi les options valides.")
         except ValueError:
-            print("Erreur, vous devez entrer un nombre pour votre option!")
-        print()
+            print("Erreur, vous devez entrer un nombre pour votre option! \n")
 
 
-convertisseur()
+convertisseur("cm", "pouce")
